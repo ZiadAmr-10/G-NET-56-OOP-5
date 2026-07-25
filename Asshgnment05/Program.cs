@@ -19,11 +19,16 @@
             #endregion
             #region Question02
             /*
-             The problem is that both interfaces contain a method with the same signature.
-             In the  design one method implicitly implements both interfaces
-             and both interfaces use the same implementation and the class cannot provide different behavior for each interface
-             To handle this problem  the class should implement each method separately using the interface name
-             Then call the required method through an interface reference or by casting the object to the required interface.
+            A) The problem is that both interfaces contain a method with the same signature.
+             .In the  design one method implicitly implements both interfaces
+             .and both interfaces use the same implementation and the class cannot provide different behavior for each interface
+             .To handle this problem  the class should implement each method separately using the interface name
+             .Then call the required method through an interface reference or by casting the object to the required interface.
+            B)The problem can fixed by using Explicit Interface 
+               Each interface method is implemented separately using the interface name and each interface has its own behavior
+               This technique is called Explicit Interface Implementation and the methods are called through an interface reference or by casting to the required interface.
+            C) No , Because explicit interface members are hidden from the class reference
+               They can only be accesse by interface reference or by casting the object to the required interface.
              */
             #endregion
             #endregion
