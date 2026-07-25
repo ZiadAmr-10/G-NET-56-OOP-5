@@ -31,6 +31,19 @@
                They can only be accesse by interface reference or by casting the object to the required interface.
              */
             #endregion
+            #region Question03
+            /*
+             The Shallow copy and deep copy using to copy the object in heap
+             The shallow copy copies the object when the object has value type copy it, but when the object has reference type copy the reference 
+             and still point to the same object
+             in case : the reference type is refere to string ,the object one doesn't affect becasue the string is immutable
+             but if it's string builder or other reference type it's risky because its copy the reference and still can access to the same value and modify it 
+             Deep copy copies both value-type and reference type and creates new object
+             so it uses more memory and is slower than a shallow copy and the risk  less than a shallow copy.
+             Use shallow copy when sharing reference objects is acceptable
+             Use deep copy when you need a completely independent copy 
+             */
+            #endregion
             #endregion
         }
     }
