@@ -44,6 +44,19 @@
              Use deep copy when you need a completely independent copy 
              */
             #endregion
+            #region Question04
+            /*
+             The output : 
+             Dev-Testing
+             QA-Testing
+             Why : 
+             Because the e2 copies the Reference not vlaue because it's reference type 
+             when it refers to (string Title) copies the reference
+             when changed it didn't affect to e1 because string is immutable 
+             but when copies the reference of (Department Dept) it refers to the reference 
+             and when change it ,Changes the name of the same Department object because both e1 and e2 refer to the same object 
+             */
+            #endregion
             #endregion
         }
     }
