@@ -17,6 +17,15 @@
              Allow multiple inheritance of behavior  
              */
             #endregion
+            #region Question02
+            /*
+             The problem is that both interfaces contain a method with the same signature.
+             In the  design one method implicitly implements both interfaces
+             and both interfaces use the same implementation and the class cannot provide different behavior for each interface
+             To handle this problem  the class should implement each method separately using the interface name
+             Then call the required method through an interface reference or by casting the object to the required interface.
+             */
+            #endregion
             #endregion
         }
     }
