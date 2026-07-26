@@ -1,4 +1,6 @@
-﻿namespace Asshgnment05
+﻿using System.Runtime.InteropServices;
+
+namespace Asshgnment05
 {
     internal class Program
     {
@@ -57,6 +59,36 @@
              and when change it ,Changes the name of the same Department object because both e1 and e2 refer to the same object 
              */
             #endregion
+            #endregion
+            #region Part02
+            Cinema cinema=new Cinema("Cinema");
+            cinema.OpenCinema();
+            StandardTicket Ticket1 = new StandardTicket("Avengers", 200, "A5");
+            Ticket1.Book();
+            cinema.Add(Ticket1);
+            VipTicket Ticket2 = new VipTicket("Spiderman", 300, true, 50);
+            Ticket2.Book();
+            cinema.Add(Ticket2);
+            IMaxTicket Ticket3 = new IMaxTicket("inception",400,true);
+            Ticket3.Book();
+            cinema.Add(Ticket3);
+            Console.WriteLine("==========All Tickets===========");
+            cinema.PrintAllTickets();
+            VipTicket Ticket4 = (VipTicket)Ticket2.Clone();
+            Ticket4.MovieName = "Batman";
+            Console.WriteLine("=========Clone Test==========");
+            Console.WriteLine("Original:");
+            Ticket2.Print();ٍ
+            Console.WriteLine("Clone:");
+            Ticket4.Print();
+            Console.WriteLine("=========After Canciling==========");
+            Ticket1.Cancel();
+            Ticket1.Print();
+            Console.WriteLine("==========Booking Helper All Tickets==========");
+            IPrintable[] Tickets = {Ticket1, Ticket2,Ticket3,Ticket4};
+            BookingHelper.PrintAll(Tickets);
+            cinema.CloseCinema();
+
             #endregion
         }
     }
